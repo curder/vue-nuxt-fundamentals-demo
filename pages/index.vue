@@ -6,29 +6,28 @@
         Nuxt Fundamentals
       </h1>
       <div class="links space-x-6">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green text-blue-600 hover:text-blue-700"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey text-blue-600 hover:text-blue-700"
-        >
-          GitHub
-        </a>
+        <NuxtLink v-for="post in posts" :key="post.id"
+                  :to="{name: 'posts-id', params: {id: post.id}}"
+                  v-text="post.title"
+                  class="button--green text-blue-600 hover:text-blue-700">
+        </NuxtLink>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+        posts: [],
+    };
+  },
 
-
-
+  created() {
+    this.posts = this.$store.state.posts.all;
+  }
+}
+</script>
 <style>
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
