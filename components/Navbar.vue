@@ -6,23 +6,23 @@
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
               <h2 class="text-2xl text-gray-700">
-                Nuxt Fundamentals
+                <NuxtLink :to="{name: 'index'}">Nuxt Fundamentals</NuxtLink>
               </h2>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-            <NuxtLink to="/" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+            <NuxtLink :to="{name: 'index'}" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
               Index
             </NuxtLink>
-            <NuxtLink to="post" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Post
+            <NuxtLink :to="{name: 'post-id', params: {id: 'what-is-nuxt-js'}}" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              What is Nuxt.js
             </NuxtLink>
-            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Projects
-            </a>
-            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Calendar
-            </a>
+            <NuxtLink :to="{name: 'post-id', params: {id: 'what-is-vue-js'}}" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              What is Vue.js
+            </NuxtLink>
+            <NuxtLink :to="{name: 'post-id', params: {id: 'what-is-typescript'}}" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              What is TypeScript
+            </NuxtLink>
           </div>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
