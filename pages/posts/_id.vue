@@ -31,6 +31,16 @@ export default {
     };
   },
 
+  head() {
+    return {
+      title: `${this.post.title} - Nuxt Fundamentals`,
+      meta: [
+        {name: "twitter:title", content: this.post.title},
+        {name: "twitter:description", content: this.post.content},
+      ]
+    }
+  },
+
   mounted() {
     this.post = this.$store.state.posts.all.find((item) => item.id === this.id);
 

@@ -23,6 +23,12 @@ export default {
     };
   },
 
+  head() {
+      return {
+        title: 'Home Page - Nuxt Fundamentals',
+      }
+  },
+
   created() {
     this.posts = this.$store.state.posts.all;
   }
