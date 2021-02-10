@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <div>
+    <div class="space-y-8">
       <Logo/>
       <h1 class="title">
-        nuxt-fundamentals
+        Nuxt Fundamentals
       </h1>
-      <div class="links">
+      <div class="links space-x-6">
         <a
           href="https://nuxtjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
+          class="button--green text-blue-600 hover:text-blue-700"
         >
           Documentation
         </a>
@@ -18,7 +18,7 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--grey"
+          class="button--grey text-blue-600 hover:text-blue-700"
         >
           GitHub
         </a>
@@ -27,9 +27,7 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
+
 
 <style>
 /* Sample `apply` at-rules with Tailwind CSS

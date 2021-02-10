@@ -15,9 +15,14 @@ export default {
     ]
   },
 
+  // Styling your active classes in Nuxt.js: https://zh.nuxtjs.org/docs/2.x/features/nuxt-components/#linkactiveclass
+  router: {
+    // linkActiveClass: 'border-indigo-500 text-gray-900',
+    linkExactActiveClass: 'border-indigo-500 text-gray-900'
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "@/assets/css/post.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
