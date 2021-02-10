@@ -13,15 +13,5 @@ export default {
 </script>
 
 <style>
-.container {
-  @apply mx-auto flex justify-center items-center leading-normal;
-}
 
-.title {
-  @apply font-bold text-3xl text-yellow-600;
-}
-
-article * {
-  @apply mb-4;
-}
 </style>
