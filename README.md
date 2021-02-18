@@ -1,5 +1,9 @@
 # nuxt-fundamentals
 
+See [HeroKu App Demo](https://vue-nuxt-fundamentals.herokuapp.com/)
+
+
+
 ## Build Setup
 
 ```bash
@@ -18,3 +22,7 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Deployment
+
+More detail See [Deploy Nuxt on Heroku](https://zh.nuxtjs.org/docs/2.x/deployment/heroku-deployment)
