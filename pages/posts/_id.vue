@@ -10,9 +10,10 @@
     <aside>
       <h2 class="text-2xl text-yellow-600 font-medium">Post you might enjoy</h2>
       <ul>
-        <li v-for="relate in related" :key="relate.id">
-          <NuxtLink :to="{name: 'posts-id', params: {id: relate.id}}"
-                    class="text-blue-500 hover:text-blue-700 hover:underline">{{ relate.title }}</NuxtLink>
+        <li v-for="post in related_posts" :key="post.id">
+          <NuxtLink :to="{name: 'posts-id', params: {id: post.id}}"
+                    class="text-blue-500 hover:text-blue-700 hover:underline">{{ post.title }}
+          </NuxtLink>
         </li>
       </ul>
     </aside>
@@ -20,15 +21,11 @@
 </template>
 <script>
 export default {
-  data() {
+  async asyncData({app, params}) {
     return {
-      id: this.$route.params.id,
-
-      post: {},
-      related: [],
-
-      posts: [],
-    };
+      post: app.store.state.posts.all.find((item) => item.id === params.id),
+      related_posts: app.store.state.posts.all.filter((item) => item.id !== params.id),
+    }
   },
 
   head() {
@@ -39,12 +36,6 @@ export default {
         {name: "twitter:description", content: this.post.content},
       ]
     }
-  },
-
-  mounted() {
-    this.post = this.$store.state.posts.all.find((item) => item.id === this.id);
-
-    this.related = this.$store.state.posts.all.filter((item) => item.id !== this.id);
   },
 }
 </script>

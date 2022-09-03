@@ -17,21 +17,17 @@
 </template>
 <script>
 export default {
-  data() {
+  async asyncData({app}) {
     return {
-        posts: [],
-    };
+      posts: app.store.state.posts.all
+    }
   },
 
   head() {
-      return {
-        title: 'Home Page - Nuxt Fundamentals',
-      }
+    return {
+      title: 'Home Page - Nuxt Fundamentals',
+    }
   },
-
-  created() {
-    this.posts = this.$store.state.posts.all;
-  }
 }
 </script>
 <style>
